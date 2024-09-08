@@ -1,12 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace", "Marketplace\Marketplace.csproj", "{AE0CF907-F0AC-4462-BC38-E88AD2D3921B}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace", "Marketplace\Marketplace.csproj", "{AE0CF907-F0AC-4462-BC38-E88AD2D3921B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Domain", "Marketplace.Domain\Marketplace.Domain.csproj", "{AD477131-DFD9-4CF1-A42F-7B932148B4AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Framework", "Marketplace.Framework\Marketplace.Framework.csproj", "{FEE71FF8-559C-40CC-9AF5-1E4051EE9C7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Tests", "Marketplace.Tests\Marketplace.Tests.csproj", "{F682B8F9-A43B-4D6D-BECE-4F45767A026A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Domain", "Marketplace.Domain\Marketplace.Domain.csproj", "{C8E1E2F1-E402-496B-9371-A84903EE62CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Framework", "Marketplace.Framework\Marketplace.Framework.csproj", "{FEE71FF8-559C-40CC-9AF5-1E4051EE9C7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Tests", "Marketplace.Tests\Marketplace.Tests.csproj", "{C69A6FE6-7F76-4B63-90C5-E70C90A89924}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,17 +21,23 @@ Global
 		{AE0CF907-F0AC-4462-BC38-E88AD2D3921B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE0CF907-F0AC-4462-BC38-E88AD2D3921B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE0CF907-F0AC-4462-BC38-E88AD2D3921B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD477131-DFD9-4CF1-A42F-7B932148B4AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD477131-DFD9-4CF1-A42F-7B932148B4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD477131-DFD9-4CF1-A42F-7B932148B4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD477131-DFD9-4CF1-A42F-7B932148B4AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F682B8F9-A43B-4D6D-BECE-4F45767A026A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F682B8F9-A43B-4D6D-BECE-4F45767A026A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F682B8F9-A43B-4D6D-BECE-4F45767A026A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F682B8F9-A43B-4D6D-BECE-4F45767A026A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FEE71FF8-559C-40CC-9AF5-1E4051EE9C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FEE71FF8-559C-40CC-9AF5-1E4051EE9C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE71FF8-559C-40CC-9AF5-1E4051EE9C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE71FF8-559C-40CC-9AF5-1E4051EE9C7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E1E2F1-E402-496B-9371-A84903EE62CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E1E2F1-E402-496B-9371-A84903EE62CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E1E2F1-E402-496B-9371-A84903EE62CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E1E2F1-E402-496B-9371-A84903EE62CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69A6FE6-7F76-4B63-90C5-E70C90A89924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69A6FE6-7F76-4B63-90C5-E70C90A89924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69A6FE6-7F76-4B63-90C5-E70C90A89924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69A6FE6-7F76-4B63-90C5-E70C90A89924}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44688435-EE9F-4FF0-9DDC-65C172095F8E}
 	EndGlobalSection
 EndGlobal
