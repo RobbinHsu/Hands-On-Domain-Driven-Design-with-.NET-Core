@@ -15,9 +15,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using static Marketplace.Infrastructure.RavenDb.Configuration;
-using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 // ReSharper disable UnusedMember.Global
 
@@ -30,7 +30,7 @@ namespace Marketplace
         public const string CookieScheme = "MarketplaceScheme";
 
         public Startup(
-            IHostingEnvironment environment,
+            IWebHostEnvironment environment,
             IConfiguration configuration
         )
         {
@@ -39,7 +39,7 @@ namespace Marketplace
         }
 
         IConfiguration Configuration { get; }
-        IHostingEnvironment Environment { get; }
+        IWebHostEnvironment Environment { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -81,9 +81,8 @@ namespace Marketplace
                     purgomalumClient.CheckForProfanity
                 )
                 .AddPaidServicesModule("PaidServices")
-                .AddJsonFormatters()
-                .AddApiExplorer()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+                .AddNewtonsoftJson()
+                .AddApiExplorer();
 
             services.AddSpaStaticFiles(
                 configuration =>
@@ -94,7 +93,7 @@ namespace Marketplace
                 c =>
                     c.SwaggerDoc(
                         "v1",
-                        new Info
+                        new OpenApiInfo
                         {
                             Title = "ClassifiedAds", Version = "v1"
                         }
@@ -102,7 +101,7 @@ namespace Marketplace
             );
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
 

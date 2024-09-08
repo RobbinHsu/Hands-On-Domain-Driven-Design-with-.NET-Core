@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using Serilog;
 using static System.Environment;
 
@@ -15,7 +16,7 @@ namespace Marketplace
                 .ReadFrom.Configuration(configuration)
                 .CreateLogger();
 
-            ConfigureWebHost(configuration).Build().Run();
+            CreateHostBuilder(args, configuration).Build().Run();
         }
 
         static IConfiguration BuildConfiguration(string[] args)
@@ -23,13 +24,19 @@ namespace Marketplace
                 .AddJsonFile("appsettings.json", false, false)
                 .Build();
 
-        static IWebHostBuilder ConfigureWebHost(
+        static IHostBuilder CreateHostBuilder(
+            string[] args,
             IConfiguration configuration)
-            => new WebHostBuilder()
-                .UseStartup<Startup>()
-                .UseConfiguration(configuration)
-                .UseContentRoot(CurrentDirectory)
-                .UseSerilog()
-                .UseKestrel();
+            => Host.CreateDefaultBuilder(args)
+                .UseSerilog() // UseSerilog should be called on IHostBuilder
+                .ConfigureWebHostDefaults(
+                    webBuilder =>
+                    {
+                        webBuilder.UseStartup<Startup>()
+                            .UseConfiguration(configuration)
+                            .UseContentRoot(CurrentDirectory)
+                            .UseKestrel();
+                    }
+                );
     }
 }
