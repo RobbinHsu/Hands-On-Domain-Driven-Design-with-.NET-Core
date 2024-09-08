@@ -1,6 +1,4 @@
-﻿using System;
-using Domain;
-using Marketplace.Domain;
+﻿using Marketplace.Domain;
 using Xunit;
 
 namespace Marketplace.Tests

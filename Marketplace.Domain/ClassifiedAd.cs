@@ -1,7 +1,6 @@
-﻿using Marketplace.Domain;
-using Marketplace.Framework;
+﻿using Marketplace.Framework;
 
-namespace Domain
+namespace Marketplace.Domain
 {
     public class ClassifiedAd : Entity
     {
@@ -43,7 +42,7 @@ namespace Domain
             });
 
         public void RequestToPublish() =>
-            Apply(new Events.ClassidiedAdSentForReview {Id = Id});
+            Apply(new Events.ClassidiedAdSentForReview { Id = Id });
 
         protected override void When(object @event)
         {
