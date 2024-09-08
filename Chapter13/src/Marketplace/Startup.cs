@@ -107,25 +107,24 @@ namespace Marketplace
 
             app.UseAuthentication();
 
-            app.UseMvc(
-                routes =>
-                {
-                    routes.MapRoute(
-                        "default",
-                        "{controller=Home}/{action=Index}/{id?}"
-                    );
+            app.UseRouting();
 
-                    routes.MapRoute(
-                        "api",
-                        "api/{controller=Home}/{action=Index}/{id?}"
-                    );
+            app.UseAuthorization();
 
-                    routes.MapSpaFallbackRoute(
-                        "spa-fallback",
-                        new {controller = "Home", action = "Index"}
-                    );
-                }
-            );
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                );
+
+                endpoints.MapControllerRoute(
+                    name: "api",
+                    pattern: "api/{controller=Home}/{action=Index}/{id?}"
+                );
+
+                endpoints.MapFallbackToController("Index", "Home");
+            });
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
