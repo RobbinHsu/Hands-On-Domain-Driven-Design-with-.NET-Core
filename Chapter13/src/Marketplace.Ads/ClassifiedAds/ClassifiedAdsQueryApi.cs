@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Marketplace.Ads.Projections;
-using Marketplace.Modules.ClassifiedAds;
 using Marketplace.RavenDb;
 using Microsoft.AspNetCore.Mvc;
 using Raven.Client.Documents.Session;

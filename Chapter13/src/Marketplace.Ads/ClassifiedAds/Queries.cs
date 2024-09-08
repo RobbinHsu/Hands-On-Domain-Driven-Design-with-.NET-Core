@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Marketplace.Ads.Projections;
 using Raven.Client.Documents.Session;
 
-namespace Marketplace.Modules.ClassifiedAds
+namespace Marketplace.Ads.ClassifiedAds
 {
     public static class Queries
     {

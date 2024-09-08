@@ -1,6 +1,6 @@
 using System;
 
-namespace Marketplace.Modules.ClassifiedAds
+namespace Marketplace.Ads.ClassifiedAds
 {
     public static class QueryModels
     {
