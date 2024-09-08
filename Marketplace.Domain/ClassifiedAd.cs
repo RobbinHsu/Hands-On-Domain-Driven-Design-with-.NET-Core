@@ -1,6 +1,7 @@
-﻿using Marketplace.Framework;
+﻿using Marketplace.Domain;
+using Marketplace.Framework;
 
-namespace Marketplace.Domain
+namespace Domain
 {
     public class ClassifiedAd : Entity
     {

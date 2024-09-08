@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Marketplace.Domain
+﻿namespace Domain
 {
     public class InvalidEntityStateException : Exception
     {

@@ -1,5 +1,4 @@
-﻿using System;
-using Marketplace.Framework;
+﻿using Marketplace.Framework;
 
 namespace Marketplace.Domain
 {

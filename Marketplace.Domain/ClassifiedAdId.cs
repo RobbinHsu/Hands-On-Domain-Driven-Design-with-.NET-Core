@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Marketplace.Domain
+﻿namespace Marketplace.Domain
 {
     public class ClassifiedAdId
     {
