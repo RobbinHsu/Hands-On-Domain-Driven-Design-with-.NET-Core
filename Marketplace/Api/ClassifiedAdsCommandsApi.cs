@@ -20,7 +20,8 @@ namespace Marketplace.Api
         {
             await _applicationService.Handle(request);
 
-            Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message));
+            //Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message));
+            Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(request));
             
             return Ok();
         }

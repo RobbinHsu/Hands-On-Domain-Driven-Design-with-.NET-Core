@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace Marketplace.Api
 {
     public class ClassifiedAdsApplicationService
@@ -5,6 +7,7 @@ namespace Marketplace.Api
         public Task Handle(Contracts.ClassifiedAds.V1.Create command)
         {
             // we need to create a new Classified Ad here
+            return Task.CompletedTask;
         }
     }
 }
